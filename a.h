@@ -72,5 +72,5 @@ public:
         return result;
     }
 };
-
+//asdjlakjsdlakjsldkajsldkjalksdj
 #endif // A_H
