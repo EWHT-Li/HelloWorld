@@ -1,5 +1,8 @@
 package an.qt.hello;
 import java.lang.String;
+import android.os.Environment;
+import java.io.File;
+
 public class JHello {
 
         private String bla;
@@ -27,6 +30,17 @@ public class JHello {
                 JHello2.consoleblalaNewC("native方法NewClassz中");
                 return "izaza";
         }
+        public static String returnSdcardPath(){
+         File sdDir =null;
+         boolean sdCardExist = Environment.getExternalStorageState()
+         .equals(android.os.Environment.MEDIA_MOUNTED);
+         if(sdCardExist)
+         {
+             sdDir=Environment.getExternalStorageDirectory();
+             return sdDir.toString();
+         }
+         return "";
+    }
 
         public static native void consoleblala(String blala);
         public static native void consoleblalaC(String blala);
